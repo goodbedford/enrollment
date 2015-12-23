@@ -1,0 +1,56 @@
+StudentID,FirstName,LastName,CheckListDate,CounselorFirstname,CounselorLastname,Grade,Age
+137,Jacob,lastname1,9/5/2013,Teresa,Jackson,12TH,19.76
+140,Lori,lastname2,9/5/2013,Teresa,Jackson,12TH,19.11
+139,Ericka,lastname3,9/5/2013,Teresa,Jackson,12TH,19.11
+167,Richard,lastname4,3/27/2014,Teresa,Jackson,11TH,19.05
+97,James,lastname5,7/1/2013,Teresa,Jackson,12TH,21.4
+163,John,lastname6,1/24/2014,Amelia,Bishop,CAT,23.28
+114,Tyrone,lastname7,7/1/2013,Teresa,Jackson,12TH,20.57
+146,Jose,lastname8,9/19/2013,Teresa,Jackson,12TH,19.49
+113,Gerald,lastname9,7/1/2013,Teresa,Jackson,12TH,21.45
+168,Michael,lastname10,5/1/2014,Teresa,Jackson,11TH,18.41
+160,Umar,lastname11,1/21/2014,Teresa,Jackson,11TH,19.23
+135,Elon,lastname12,7/1/2013,Teresa,Jackson,12TH,19.88
+159,Melissa,lastname13,2/4/2014,Teresa,Jackson,11TH,18.34
+173,Katrina,lastname14,5/19/2014,Teresa,Jackson,11TH,18.65
+165,Antonio,lastname15,4/9/2014,Teresa,Jackson,11TH,19.74
+123,Alexander,lastname16,7/1/2013,Kristen,Kim,12TH,19.53
+154,Marvin,lastname17,11/13/2013,Teresa,Jackson,11TH,18.31
+155,Carneice,lastname18,11/14/2013,Teresa,Jackson,12TH,20.62
+162,Riley,lastname19,2/18/2014,Teresa,Jackson,11TH,19.23
+164,Nicole,lastname20,4/9/2014,Teresa,Jackson,11TH,18.63
+148,Terence,lastname21,9/30/2013,Amelia,Bishop,CAT,23.3
+166,Yuri,lastname22,4/24/2014,Kristen,Kim,11TH,19.18
+153,Tashauntie,lastname23,10/16/2013,Teresa,Jackson,12TH,23.08
+177,Jacky,lastname24,5/22/2014,Amelia,Bishop,CAT,22.68
+175,Chi Quang (Peter),lastname25,5/1/2014,Kristen,Kim,11TH,18.75
+126,Leonna,lastname26,7/1/2013,Teresa,Jackson,12TH,20.94
+134,Eric,lastname27,7/1/2013,Kristen,Kim,12TH,19.84
+102,Cui Yi (Jenny),lastname28,7/1/2013,Kristen,Kim,CAT,22.97
+176,Ivy,lastname29,3/28/2014,Kristen,Kim,11TH,19.22
+131,Christian,lastname30,7/1/2013,Kristen,Kim,12TH,19.97
+151,Devin,lastname31,10/16/2013,Teresa,Jackson,12TH,20.22
+121,Norlando,lastname32,7/1/2013,Teresa,Jackson,12TH,20.9
+161,Jason,lastname33,1/24/2014,Teresa,Jackson,11TH,18.66
+138,Reginald,lastname34,9/5/2013,Teresa,Jackson,12TH,19.72
+129,Willie,lastname35,7/1/2013,Teresa,Jackson,12TH,20.44
+147,David,lastname36,9/4/2013,Teresa,Jackson,12TH,22.05
+158,Brian,lastname37,11/27/2013,Kristen,Kim,12TH,19.58
+169,Constantino,lastname38,5/1/2014,Teresa,Jackson,11TH,18.74
+142,Duane,lastname39,9/5/2013,Teresa,Jackson,12TH,20.35
+157,Jazminn,lastname40,11/20/2013,Teresa,Jackson,12TH,21.86
+156,Marcus,lastname41,12/13/2013,Teresa,Jackson,12TH,19.49
+152,Vanessa,lastname42,10/18/2013,Amelia,Bishop,CAT,23.25
+174,Quincy,lastname43,5/19/2014,Teresa,Jackson,11TH,18.48
+149,LaTanya,lastname44,9/23/2013,Amelia,Bishop,CAT,23.77
+141,Ravin,lastname45,9/5/2013,Teresa,Jackson,12TH,19.29
+145,Ray,lastname46,9/23/2013,Teresa,Jackson,12TH,19.55
+170,Demian,lastname47,5/13/2014,Teresa,Jackson,CAT,22.52
+178,Cheneka,lastname48,6/5/2014,Amelia,Bishop,CAT,23.14
+133,Manson,lastname49,7/1/2013,Kristen,Kim,12TH,19.88
+171,William,lastname50,5/21/2014,Kristen,Kim,11TH,18.9
+111,John Paul,lastname51,7/1/2013,Teresa,Jackson,12TH,21.45
+132,Pei Lei,lastname52,7/1/2013,Kristen,Kim,12TH,19.99
+125,Julie,lastname53,7/1/2013,Kristen,Kim,12TH,21.03
+144,Shawn,lastname54,8/4/2013,Teresa,Jackson,12TH,21.89
+150,Sharon,lastname55,10/10/2013,Amelia,Bishop,CAT,23.34

@@ -1,0 +1,7 @@
+.legendBlock1 {
+  display: inline-block;
+  background-color: red;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+}
