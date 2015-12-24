@@ -3,20 +3,33 @@ var app = express();
 var fs = require('fs');
 var Converter = require('csvtojson').Converter;
 var jsonData;
+var jsonEdData;
 var parseHelper = require('./helper/parseHelper.js');
 var converter = new Converter({
   //auto type check
   checkType: true 
 });
+var converter2 = new Converter({
+  //auto type check
+  checkType: true 
+});
 
+// subscribtion data
 var filename = './part1/vendors/checklistQuery2.csv';
-
 converter.on('end_parsed', function(jsonArray){
   jsonData = jsonArray;
   // console.log("j data:", jsonData);
 });
 fs.createReadStream(filename).pipe(converter);
+//education data
+var filename2 = './part1/vendors/educationData.csv';
+converter2.on('end_parsed', function(jsonEdArray){
+  jsonEdDataArray = jsonEdArray;
+  console.log("filename2: csv2json:", jsonEdDataArray);
+});
+fs.createReadStream(filename2).pipe(converter2); 
 
+ 
 // app.use(express.static('/part1'));
 app.use(express.static(__dirname + "/part1"));
 
@@ -32,7 +45,6 @@ app.get('/api/dataset?', function(req, res){
   var newArray = [];
   var tempDate = [];
   if(from){
-
     jsonData.forEach(function(jObj){
       var tempObj = (JSON.parse(JSON.stringify(jObj)));
       tempObj['CheckListDate'] = parseHelper.arrDateObjFormator(jObj['CheckListDate']);
@@ -60,9 +72,16 @@ app.get('/api/dataset?', function(req, res){
     });
     console.log("newArray  after formater",newArray);
     res.json(newArray);
-  }
+  }  
 });
 
+app.get('/api/dataset/edu', function(req, res){
+  console.log("the req fo edu:", req);
+  console.log("the education data:", jsonEdDataArray);
+
+  res.json(jsonEdDataArray);
+
+});
 
 app.listen(3000, successCallBack);
 

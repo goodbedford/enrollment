@@ -1,22 +1,43 @@
+<!Doctype html>
 <html>
   <head>
     <title>Enrollment</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="part1/vendors/c3.css">
-    
+    <link rel="stylesheet" href="vendors/c3.css">
+    <link rel="stylesheet" href="vendors/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Enrollment</h1>
+      <div>
+        <a href="index.html">page 1</a>
+        <a href="index2.html">page 2</a>
+        <a href="index3.html">page 3</a>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <form name="dateRange">
+            <label  for="fromDate" class="">From:</label>
+            <input id="fromDate"type="date" name="fromDate" class="">
+            <label  for="toDate" class="">To:</label>
+            <input id="toDate" type="date" name="toDate" class="">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <h3 class="text-center">Obesity vs Education</h3>
+        <div id="educationChart"></div>
+      </div>
+
+    </div>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.11/d3.js"></script>
-    <script src="part1/vendors/c3.js"></script>
-    <script src="part1/js/app.js"></script>
-  </head>
-  <body>
-    <div class="container">
-        <h1>Enrollment</h1>
-
-    </div>
-
-    
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="vendors/c3.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
