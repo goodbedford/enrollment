@@ -19,14 +19,14 @@
   //helpers
   function dateChangeListener() {
     // fromDate.onchange = setDate(fromDate.value);
-    var $fromDate = $('#fromDate');
-    var $toDate = $('#toDate');
+    var $fromDate = $("#fromDate");
+    var $toDate = $("#toDate");
     $fromDate.on('change',function(){
       console.log("changed from input:", $fromDate.val());
       console.log("changed to input:", $toDate.val());
       csvToJson($fromDate.val(),$toDate.val());
     });
-    $toDate.on('change',function(){
+    $toDate.on("change",function(){
       console.log("changed from input:", $fromDate.val());
       console.log("changed to input:", $toDate.val());
       csvToJson($fromDate.val(),$toDate.val());
@@ -90,32 +90,32 @@
   }
   function goChart(chartData){
     var chartTime = c3.generate({
-          bindto: '#chartTime',
+          bindto: "#chartTime",
           padding: {
             top: 50,
             bottom: 25
           },
           size:{
-            height:400
+            height:480
           },
           data: {
-              x: 'x',
+              x: "x",
               columns:chartData,
-              type: 'line',
+              type: "line",
               colors:{
-                age: '#ccc'
+                age: "#ccc"
               },
               color: function(color,d){
                 console.log("color", color);
                 console.log("data:",d);
                 if(d.value > 21){
-                  color = 'red';
+                  color = "red";
                 }
 
                 return color;
               },
               classes: {
-                age: 'age-point'
+                age: "age-point"
               },
           },
           point:{
@@ -131,20 +131,22 @@
           },
           axis: {
             x: {
-              type: 'timeseries',
+              type: "timeseries",
               label: {
-                text: 'Time Line',
-                position: 'outer-middle'
+                text: "Time Line",
+                position: "inner-center"
               },
               tick:{
-                format: '%m/%d/%Y',
-                fit: true,
+                format: "%m/%d/%Y",
+                fit: false,
+                centered: true,
+                rotate: 70,
               }
             },
             y: {
               label: {
                 text: "Age",
-                position: 'outer-middle'
+                position: "outer-middle"
               },
               max: 30,
               min: 10,
@@ -160,7 +162,7 @@
   }
   function showMeanChart(chartData, chartTarget){
     var meanChart = c3.generate({
-      bindto: '#meanAgeChart',
+      bindto: "#meanAgeChart",
       padding: {
         top: 25
       },
@@ -169,7 +171,7 @@
       },
       data:{
         columns: chartData,
-        type: 'gauge',
+        type: "gauge",
         color: function(color, d){
           console.log("the color is:", color);
           console.log("c:is ",d.value);
@@ -183,13 +185,13 @@
           }
         },
         width: 25,
-        units: 'age'
+        units: "age"
       }
     });
   }
   function showMedianChart(chartData, chartTarget){
     var medianChart = c3.generate({
-      bindto: '#medianAgeChart',
+      bindto: "#medianAgeChart",
       padding: {
         top: 25
       },
@@ -198,7 +200,7 @@
       },
       data:{
         columns: chartData,
-        type: 'gauge',
+        type: "gauge",
         color: function(color, d){
           console.log("the color is:", color);
           console.log("c:is ",d.value);
@@ -212,13 +214,13 @@
           }
         },
         width: 25,
-        units: 'age'
+        units: "age"
       }
     });
   }
   function showMaxAgeChart(chartData, chartTarget){
     var medianChart = c3.generate({
-      bindto: '#maxAgeChart',
+      bindto: "#maxAgeChart",
       padding: {
         top: 25
       },
@@ -227,7 +229,7 @@
       },
       data:{
         columns: chartData,
-        type: 'gauge',
+        type: "gauge",
         color: function(color, d){
           console.log("the color is:", color);
           console.log("c:is ",d.value);
@@ -241,7 +243,7 @@
           }
         },
         width: 25,
-        units: 'age'
+        units: "age"
       }
     });
   }  
@@ -259,16 +261,16 @@
       data:{
         json: chartData,
         keys:{
-          x:'state',
-          value: ['overweightPeople', 'bachelors', 'state', 'politicalParty']
+          x:"state",
+          value: ["overweightPeople", "bachelors", "state", "politicalParty"]
         },
-        type: 'bar',
+        type: "bar",
         axes:{
         },
       },
       axis:{
         x:{
-          type: 'category'
+          type: "category"
 
         },
         y:{
@@ -302,10 +304,10 @@
           lastName: ["lastName"],
           checkListDate: ["x"],
           counselorFirstName: ["counselorFirstName"],
-          meanAge: ['meanAge'],
-          medianAge: ['medianAge'],
-          maxAge: ['maxAge'],
-          minAge: ['minAge']
+          meanAge: ["meanAge"],
+          medianAge: ["medianAge"],
+          maxAge: ["maxAge"],
+          minAge: ["minAge"]
         };
       //console.log("jsonObj responseData:",responseData);
       jsonObjArray = responseData;
