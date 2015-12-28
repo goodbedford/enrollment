@@ -83,7 +83,7 @@ app.get('/api/dataset/edu', function(req, res){
 
 });
 
-app.listen(3000, successCallBack);
+app.listen(process.env.PORT || 3000, successCallBack);
 
 function successCallBack() {
   console.log("listening on Port 3000");
