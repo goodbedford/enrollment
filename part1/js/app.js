@@ -137,7 +137,8 @@
                 position: 'outer-middle'
               },
               tick:{
-                format: '%m/%d/%Y'
+                format: '%m/%d/%Y',
+                fit: true,
               }
             },
             y: {
@@ -148,7 +149,7 @@
               max: 30,
               min: 10,
               tick: {
-                values: [10,15,20,25,30]
+                values: [10,15,20,25,30],
               }
             }
           },

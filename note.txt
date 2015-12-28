@@ -18,3 +18,31 @@ https://drive.google.com/drive/u/0/folders/0B60Waj_nZXhLTFI3SzFlQmtQVTg/export?g
       <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
       
+
+
+    [
+      {
+      type: 'participation rights',
+      moreCommon: 44,
+      neither: 42,
+      lessCommon: 14%
+      },
+      {
+      type: 'ipo protections',
+      moreCommon: 53,
+      neither: 39,
+      lessCommon: 8%
+      },
+      {
+      type: 'multiple liquidation preference',
+      moreCommon: 45,
+      neither: 40,
+      lessCommon: 15%
+      },
+      {
+      type: 'cumulative dividends',
+      moreCommon: 20,
+      neither: 65,
+      lessCommon: 15%
+      },
+    ]
