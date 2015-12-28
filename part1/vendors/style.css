@@ -16,3 +16,7 @@
 /*.c3-target-age-point {
     border: 1px solid black !important;
 }*/
+
+.nav-link {
+  margin:0 10px;
+}
