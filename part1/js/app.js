@@ -113,7 +113,10 @@
                 }
 
                 return color;
-              }
+              },
+              classes: {
+                age: 'age-point'
+              },
           },
           point:{
             select:{
@@ -141,6 +144,11 @@
               label: {
                 text: "Age",
                 position: 'outer-middle'
+              },
+              max: 30,
+              min: 10,
+              tick: {
+                values: [10,15,20,25,30]
               }
             }
           },
