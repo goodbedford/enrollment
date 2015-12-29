@@ -4,7 +4,7 @@
     <title>Enrollment</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/c3.css">
-    <link rel="stylesheet" href="vendors/style.css">
+    <link rel="stylesheet" href="vendors/index3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -17,27 +17,22 @@
         <a href="index3.html" class="nav-link">Subscriber Poll</a>
       </div>
       <hr>
-      <div class="row" hidden>
-        <div class="col-sm-6 col-sm-offset-3">
-          <form name="dateRange">
-            <label  for="fromDate" class="">From:</label>
-            <input id="fromDate"type="date" name="fromDate" class="">
-            <label  for="toDate" class="">To:</label>
-            <input id="toDate" type="date" name="toDate" class="">
-          </form>
-        </div>
+      <div class="row text-center">
+        <h3 class="">What Terms Investors See</h3>
+        <h4>Have any of these terms become more or less common over the past 5-10 years?</h4>
       </div>
-      <div class="row">
-        <h3 class="text-center">Obesity vs Education</h3>
-        <div id="educationChart" class="col-sm-8 col-sm-offset-2"></div>
+      <div class="row chartRow">
+        <div class="col-sm-3 text-center">Participation Rights<div id="chart1" class=""></div></div> 
+        <div class="col-sm-3 text-center">IPO Protections<div id="chart2" class=""></div></div>
+        <div class="col-sm-3 text-center">Multiple Liquidation Preference<div id="chart3" class=""></div></div>
+        <div class="col-sm-3 text-center">Cumulative Dividends<div id="chart4" class=""></div></div>
       </div>
-
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="vendors/c3.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/index3.js"></script>
   </body>
 </html>
