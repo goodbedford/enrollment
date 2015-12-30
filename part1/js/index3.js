@@ -48,6 +48,10 @@
       },
       legend:{
         hide:["type"],
+        item:{
+          //prevent click
+          onclick: function(d){return;},
+        }
       }
     });
   }
