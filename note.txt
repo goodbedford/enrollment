@@ -113,3 +113,8 @@ tooltip: {
                return '<div id="tooltip" class="">' + data1.name + '-' +data1.value+ '<span class="tri"></span</div>'
              }
            }
+
+
+
+http://www.investopedia.com/terms/p/participatingpreferredstock.asp
+

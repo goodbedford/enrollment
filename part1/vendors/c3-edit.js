@@ -3053,8 +3053,8 @@
             .attr("class", $$.classCircle.bind($$))
             .attr("r", $$.pointR.bind($$))
             .style("stroke", $$.color)
-            // .style("stroke-width", 1);//gb new-edit
-            .style("fill", $$.color); //original c3 style for fill
+            .style("stroke-width", 1);//gb new-edit
+            // .style("fill", $$.color); //original c3 style for fill
         $$.mainCircle
             .style("opacity", $$.initialOpacityForCircle.bind($$));
         $$.mainCircle.exit().remove();
@@ -3064,8 +3064,8 @@
         return [
             (withTransition ? this.mainCircle.transition() : this.mainCircle)
                 .style('opacity', this.opacityForCircle.bind(this))
-                // .style("fill", "white") // gb new-edit
-                .style("fill", this.color) //original c3 style for fill
+                .style("fill", "white") // gb new-edit
+                // .style("fill", this.color) //original c3 style for fill
                 .attr("cx", cx)
                 .attr("cy", cy),
             (withTransition ? selectedCircles.transition() : selectedCircles)
