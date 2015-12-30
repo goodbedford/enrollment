@@ -46,3 +46,70 @@ https://drive.google.com/drive/u/0/folders/0B60Waj_nZXhLTFI3SzFlQmtQVTg/export?g
       lessCommon: 15%
       },
     ]
+
+
+///////////////
+tool tip notes 
+css
+#tooltip {
+  position: relative;
+
+ background-color: white;
+ border:1px solid #555;
+ padding: 5px;
+}
+
+#tooltip:after {
+  border-top: 17px solid white;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  width: 0;
+  height: 0;
+
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 1.5em;
+  z-index: 1;
+}
+#tooltip:before {
+  border-top: 19px solid #555;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  width: 0;
+  height: 0;
+
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 1.4em;
+  z-index: -1;
+}
+
+c3,js
+tooltip: {
+             grouped: false,
+             position: function (data, width, height, element) {
+              // console.log(data);
+              console.log(width,height);
+              console.log(element);
+
+               var chartOffsetX = document.querySelector("#chart1").getBoundingClientRect().left;
+               var graphOffsetX = document.querySelector("#chart1 g.c3-axis-y").getBoundingClientRect().right;
+               var tooltipWidth = document.getElementById('tooltip').parentNode.clientWidth;
+               console.log("tooltip,",tooltipWidth);
+               var x = (parseInt(element.getAttribute('cx')) ) + graphOffsetX - chartOffsetX - Math.floor(tooltipWidth/2);
+               var y = element.getAttribute('cy');
+               var y = y - height - 14;
+               return {top: y, left: x}
+             },
+             contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+               // d = Math.floor(d[0].value)
+               var data1 = d[0];
+               var data2 = d[1];
+               console.log("gb",d)
+               return '<div id="tooltip" class="">' + data1.name + '-' +data1.value+ '<span class="tri"></span</div>'
+             }
+           }

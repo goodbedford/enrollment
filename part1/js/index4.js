@@ -140,7 +140,8 @@
               return d+ " pts";}
           }
         }
-      }
+      },
+      
     });
     setTimeout(function() {
         chart1.load({
@@ -149,7 +150,7 @@
         });
         // chart1.groups([["solr","elasticsearch"]]);
 
-    }, 500);
+    }, 700);
     chart1.ygrids.add(yGrid);
   }
     

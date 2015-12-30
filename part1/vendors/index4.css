@@ -36,15 +36,8 @@ a.active {
   stroke-dasharray:1 5;
   stroke-width: 1px;
 }
-table.c3-tooltip {
-  background-color: black !important;
-}
+
 .nav-link {
   margin:0 10px;
 }
 
-
-.c3-circle {
-  stroke: blue;
-  stroke-width: 1px;
-}
