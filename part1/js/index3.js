@@ -51,16 +51,7 @@
       }
     });
   }
-  // var chart1 = c3.generate({
-  //   bindto: "#chart1",
-  //   data:{
-  //     columns: chart1Data,
-  //     type: "donut"
-  //   },
-  //   donut:{
-  //     title: chart1Data[0][0],
-  //   }
-  // });
+
 
 
 

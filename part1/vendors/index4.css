@@ -1,0 +1,50 @@
+
+
+
+a.chart-nav {
+  color:#ff837e; /*pink*/
+  margin: 0 10px;
+}
+a.chart-nav:hover {
+  color: #555; /*grey*/
+}
+a.active {
+  color: #555; /*grey*/
+  font-size: 1.2em;
+}
+.chart-nav-container {
+  margin: 0 0 10px 0;
+}
+.chart-row {
+  margin-top: 1em;
+}
+.c3-axis-y-label {
+  font-size: 2em;
+  fill: #555; /*grey*/
+}
+.c3-legend-background {
+  opacity: 0.90;
+  fill: white;
+  stroke-width: 0; 
+  margin-bottom: 20px;
+}
+.c3-line {
+  stroke-width: 3px;
+}
+.c3-ygrid-lines {
+  opacity: 0.75;
+  stroke-dasharray:1 5;
+  stroke-width: 1px;
+}
+table.c3-tooltip {
+  background-color: black !important;
+}
+.nav-link {
+  margin:0 10px;
+}
+
+
+.c3-circle {
+  stroke: blue;
+  stroke-width: 1px;
+}
