@@ -1,0 +1,51 @@
+
+
+
+a.chart-nav {
+  color:#ff837e; /*pink*/
+  margin: 0 10px;
+}
+a.chart-nav:hover {
+  color: #555; /*grey*/
+}
+a.active {
+  color: #555; /*grey*/
+  font-size: 1.2em;
+}
+.chart {
+  border: 1px solid black;
+}
+
+.chart-nav-container {
+  margin: 0 0 10px 0;
+}
+.chart-row {
+  margin-top: 1em;
+}
+
+.nav-link {
+  margin:0 10px;
+}
+
+/* multi */
+#detail {
+  position: fixed;
+  top: 128px;
+  width: 100%;
+  background-color:rgba(255,255,255,0.5);
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  z-index: 0 !important;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+}
