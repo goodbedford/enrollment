@@ -58,6 +58,12 @@
               // values: arrayByNum(0,200, 10)
             }
           }
+        },
+        legend:{
+          item:{
+            //prevent click
+            onclick: function(d){return;},
+          }
         }
       });
     };
