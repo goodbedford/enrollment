@@ -56,7 +56,11 @@
             tick:{
               format: function(d){ return d+"-pts";},
               // values: arrayByNum(0,200, 10)
-            }
+            },
+            label: {
+              text: "DB-Engine Score",
+              position: "outer-middle",
+            },
           }
         }
       });
