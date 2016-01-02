@@ -143,7 +143,7 @@ SmallMults = function() {
     var keys, legend;
     legend = d3.select("#legend").append("svg").attr("width", 100).attr("height", 300);
     keys = legend.selectAll("g").data(data[0].values).enter().append("g").attr("transform", function(d, i) {
-      return "translate(" + 0. + "," + (40 * (i + 1)) + ")";
+      return "translate(" + 0 + "," + (40 * (i + 1)) + ")";
     });
     keys.append("rect").attr("width", 30).attr("height", 30).attr("fill", function(d) {
       return colorScale(d.name);

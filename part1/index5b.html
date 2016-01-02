@@ -3,7 +3,7 @@
   <head>
     <title>Enrollment</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/c3.css">
+    <!--<link rel="stylesheet" href="vendors/c3.css">-->
     <link rel="stylesheet" href="vendors/index5.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -31,21 +31,15 @@
             <a id="trends" href="#" class="chart-nav">Discussion Trends</a>&#8226;
             <a id="demand" href="#" class="chart-nav">Job Demand</a>
           </div>
-          <div class="col-sm-10 col-sm-offset-1">
+          <div class="col-sm-12 col-sm-offset-0">
             <div id="main-wrapper">
-              <div id="previews" class="">
-                <div class="month col-sm-3 text-center">January 2015<div id="jan"></div></div>
-                <div class="month col-sm-3 text-center">February 2015<div id="feb"></div></div>
-                <div class="month col-sm-3 text-center">March 2015<div id="march"></div></div>    
-                <div class="month col-sm-3 text-center">April 2015<div id="april"></div></div>
-                <div class="month col-sm-3 text-center">May 2015<div id="may"></div></div>
-                <div class="month col-sm-3 text-center">June 2015<div id="june"></div></div>
-                <div class="month col-sm-3 text-center">July 2015<div id="july"></div></div>
-                <div class="month col-sm-3 text-center">August 2015<div id="aug"></div></div>
-                <div class="month col-sm-3 text-center">September 2015<div id="sept"></div></div>
-                <div class="month col-sm-3 text-center">October 2015<div id="oct"></div></div>
-                <div class="month col-sm-3 text-center">November 2015<div id="nov"></div></div>
-                <div class="month col-sm-3 text-center">December 2015<div id="dec"></div></div>
+              <div id="previews" class=""></div>
+              <div id="detail" class="hidden">
+                <div id="detail_panel">
+                  <svg width="800" height="800">
+                    <g id="detail_view"></g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -55,7 +49,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="vendors/c3.js"></script>
+    <!-- <script src="vendors/c3.js"></script> -->
     <script src="js/index5.js"></script>
   </body>
 </html>
