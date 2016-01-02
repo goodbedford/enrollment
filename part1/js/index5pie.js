@@ -29,8 +29,8 @@
       chart = c3.generate({
         bindto: chartTarget,
         size:{
-          width: 200,
-          height: 200
+          width: 150,
+          height: 150
         },
         data: {
           x: "x",
