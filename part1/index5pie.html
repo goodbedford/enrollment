@@ -4,7 +4,7 @@
     <title>Enrollment</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/c3.css">
-    <link rel="stylesheet" href="vendors/index5.css">
+    <link rel="stylesheet" href="vendors/index5pie.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -34,19 +34,29 @@
           </div>
           <div class="col-sm-10 col-sm-offset-1">
             <div id="main-wrapper">
+              <div class="">
+                <button id="prev-btn" data-index="0">Prev</button>
+                <button id="next-btn" data-index="-1">Next</button>
+              </div>
               <div id="previews" class="">
-                <div class="month col-sm-3 text-center">January 2015<div id="jan"></div></div>
-                <div class="month col-sm-3 text-center">February 2015<div id="feb"></div></div>
-                <div class="month col-sm-3 text-center">March 2015<div id="march"></div></div>    
-                <div class="month col-sm-3 text-center">April 2015<div id="april"></div></div>
-                <div class="month col-sm-3 text-center">May 2015<div id="may"></div></div>
-                <div class="month col-sm-3 text-center">June 2015<div id="june"></div></div>
-                <div class="month col-sm-3 text-center">July 2015<div id="july"></div></div>
-                <div class="month col-sm-3 text-center">August 2015<div id="aug"></div></div>
-                <div class="month col-sm-3 text-center">September 2015<div id="sept"></div></div>
-                <div class="month col-sm-3 text-center">October 2015<div id="oct"></div></div>
-                <div class="month col-sm-3 text-center">November 2015<div id="nov"></div></div>
-                <div class="month col-sm-3 text-center">December 2015<div id="dec"></div></div>
+                <div class="month col-sm-3 text-center"><span>January 2015</span><div id="jan"></div></div>
+                <div class="month col-sm-3 text-center"><span>February 2015</span><div id="feb"></div></div>
+                <div class="month col-sm-3 text-center"><span>March 2015</span><div id="march"></div></div>    
+                <div class="month col-sm-3 text-center"><span>April 2015</span><div id="april"></div></div>
+                <div class="month col-sm-3 text-center"><span>May 2015</span><div id="may"></div></div>
+                <div class="month col-sm-3 text-center"><span>June 2015</span><div id="june"></div></div>
+                <div class="month col-sm-3 text-center"><span>July 2015</span><div id="july"></div></div>
+                <div class="month col-sm-3 text-center"><span>August 2015</span><div id="aug"></div></div>
+                <div class="month col-sm-3 text-center"><span>September 2015</span><div id="sept"></div></div>
+                <div class="month col-sm-3 text-center"><span>October 2015</span><div id="oct"></div></div>
+                <div class="month col-sm-3 text-center"><span>November 2015</span><div id="nov"></div></div>
+                <div class="month col-sm-3 text-center"><span>December 2015</span><div id="dec"></div></div>
+              </div>
+              <div id="detail-panel" class="hidden text-center">
+                <div class="detail-chart">
+                  <span id="detail-title" class=""></span>
+                  <div id="detail-chart"></div>
+                </div>
               </div>
             </div>
           </div>

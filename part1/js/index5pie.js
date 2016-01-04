@@ -1,5 +1,5 @@
 (function(){
-    var arrayByNum, arrDateFormator, arrayObjByNumm, chart, colorPicker, convertArr, createChart, data, dateSwitch, demandChart, interestChart, makeActive, popularityChart, showChart, showDemand, showInterest, showPopularity, showTrends, trendsChart;
+    var arrayByNum, arrDateFormator, arrayObjByNumm, chart, closePanel, colorPicker, convertArr, createChart, data, dateSwitch, demandChart, interestChart, makeActive, popularityChart, showChart, showDemand, showInterest, showPopularity, showTrends, trendsChart;
 
     popularityChart = [
         ["x", "2015-01-01", "2015-02-01", "2015-03-01", "2015-04-01", "2015-05-01", "2015-06-01", "2015-07-01", "2015-08-01", "2015-09-01", "2015-10-01", "2015-11-01", "2015-12-01"],
@@ -68,6 +68,49 @@
       });
     };
 
+    createChartDetail = function(data, chartTarget, h, w) {
+      var chart;
+      chart = c3.generate({
+        bindto: chartTarget,
+        size:{
+          width: w,
+          height: h
+        },
+        data: {
+          x: "x",
+          columns: data,
+          type: 'pie',
+          colors:{
+            solr: "#84a7e2",
+            elasticsearch: "#ffa29e"
+          },
+        },
+        axis:{
+          x:{
+            type: "timeseries",
+            // format: function(d){
+            //   var date = arrDateFormator(d);
+            //   return date;
+            // }
+            tick:{
+              format: "%m-%d-%Y"
+            }
+          },
+          y:{
+            tick:{
+              format: function(d){ return d+"-pts";},
+              // values: arrayByNum(0,200, 10)
+            }
+          }
+        },
+        legend:{
+          item:{
+            //prevent click
+            onclick: function(d){return;},
+          }
+        }
+      });
+    };
     convertArr = function(arr) {
       var arrOfArrs = [];
 
@@ -123,7 +166,7 @@
           month = "#dec";
           break;
       default:
-        console.log("error with date switch fn");
+        console.log("error with date switch fn",date);
       }
       return month;
     };
@@ -133,6 +176,15 @@
       for(var i = 0; i < data.length; i++){
         month = dateSwitch(data[i][0][1]);
         createChart(data[i], month);
+
+      }
+    };
+    showChartDetail = function(data, index, h, w) {
+      var month ="";
+
+      for(var i = 0; i < data.length; i++){
+        month = index ? dateSwitch(data[index][0][1]) : dateSwitch(data[i][0][1]);
+        createChartDetail(data[index], "#detail-chart",h,w);
 
       }
     };
@@ -170,6 +222,7 @@
     makeActive = function() {
       $("a.chart-nav").toggleClass("active", false);
       $(this).toggleClass("active");
+      closePanel();
     };
 
     colorPicker = function(dataColor, d) {
@@ -227,8 +280,72 @@
     return jsonArr;
   };
 
+  showDetail = function(e, nextIndex) {
+    var h,index,text,w;
+    h = 250;
+    w = 250;
+    console.log("clicked details");
+    console.log("the this", this);
+    // debugger;
+    $("#detail-panel").toggleClass("hidden", false);
+    index = nextIndex >= 0 ? nextIndex : $(this).index();
+    $("#next-btn").attr("data-index", index);
+    $("#prev-btn").attr("data-index", index);
+    // text = $(this).find("span").text();
+    text = $(".month").eq(index).find("span").text();
 
+    $("#detail-title").append(text);
 
+    // showChartDetail(convertArr(popularityChart), index, h,w  );
+
+    //if nav chart active index 0 run poplaritychart,
+    //if nav chart active
+    selectedChart =  $("a.chart-nav.active");
+    chartId = selectedChart.attr("id");
+
+    switch( chartId) {
+      case "popular":
+            showChartDetail(convertArr(popularityChart), index, h,w  );
+            break;
+      case "interest":
+            showChartDetail(convertArr(interestChart), index, h,w  );
+            break;
+      case "trends":
+            showChartDetail(convertArr(trendsChart), index, h,w  );
+            break;
+      case "demand":
+            showChartDetail(convertArr(demandChart), index, h,w  );
+            break;
+      default:
+        console.log("error with chart display", chartId);
+      }
+
+      // $(this).clone()
+    //   .toggleClass("month detailChart")
+    //   .appendTo("#detailPanel");
+  };
+
+  closePanel = function() {
+    console.log("close panel");
+    $("#detail-title").empty();
+    $("#detail-panel").toggleClass("hidden", true);
+  };
+  showNextChart = function() {
+    var nextIndex;
+    nextIndex = parseInt($(this).attr("data-index"));
+    nextIndex  =  nextIndex === 11 ? 0: nextIndex + 1;
+    closePanel();
+    // debugger;
+    showDetail(null, nextIndex);
+  };
+  showPrevChart = function() {
+    var prevIndex;
+    prevIndex = parseInt($(this).attr("data-index"));
+    prevIndex  =  prevIndex === 0 ? 11: prevIndex - 1;
+    closePanel();
+    // debugger
+    showDetail(null, prevIndex);
+  };
 
 //setup
   // data = convertArr(popularityChart.first);
@@ -237,6 +354,10 @@
   $("#trends").on("click", showTrends);
   $("#demand").on("click", showDemand);
   $("a.chart-nav").on("click", makeActive);
+  $("#previews").on("click", "div.month", showDetail);
+  $("#main-wrapper").on("click", "#detail-panel", closePanel);
+  $("#next-btn").on("click", showNextChart);
+  $("#prev-btn").on("click", showPrevChart);
   
   showPopularity();
 })();
