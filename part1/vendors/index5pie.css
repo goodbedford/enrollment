@@ -58,9 +58,11 @@ a.active {
   position: relative;
   z-index: 30;
   top: -555px;
+  border-bottom: 1px dashed;
+  padding: px 0;
 }
 .detail-nav {
-  text-align: center;
+  /*text-align: center;*/
   position: relative;
   top: 440px;
   z-index: 30;

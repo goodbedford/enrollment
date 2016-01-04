@@ -349,6 +349,7 @@
     showDetail(null, prevIndex);
   };
 
+
 //setup
   // data = convertArr(popularityChart.first);
   $("#popular").on("click", showPopularity);
@@ -360,6 +361,5 @@
   $("#main-wrapper").on("click", "#detail-panel", closePanel);
   $("#next-btn").on("click", showNextChart);
   $("#prev-btn").on("click", showPrevChart);
-  
   showPopularity();
 })();
