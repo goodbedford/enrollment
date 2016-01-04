@@ -286,6 +286,7 @@
     w = 250;
     console.log("clicked details");
     console.log("the this", this);
+    $(".detail-nav").toggleClass("hidden", false);
     // debugger;
     $("#detail-panel").toggleClass("hidden", false);
     index = nextIndex >= 0 ? nextIndex : $(this).index();
@@ -329,6 +330,7 @@
     console.log("close panel");
     $("#detail-title").empty();
     $("#detail-panel").toggleClass("hidden", true);
+    $(".detail-nav").toggleClass("hidden", true);
   };
   showNextChart = function() {
     var nextIndex;

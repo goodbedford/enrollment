@@ -12,6 +12,10 @@ a.active {
   color: #555; /*grey*/
   font-size: 1.2em;
 }
+
+.btn-lrg {
+  margin: 0 10px;
+}
 .chart {
   border: 1px solid black;
 }
@@ -54,6 +58,12 @@ a.active {
   position: relative;
   z-index: 30;
   top: -555px;
+}
+.detail-nav {
+  text-align: center;
+  position: relative;
+  top: 440px;
+  z-index: 30;
 }
 
 .hidden {
