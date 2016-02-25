@@ -118,3 +118,5 @@ tooltip: {
 
 http://www.investopedia.com/terms/p/participatingpreferredstock.asp
 
+note
+I need to start from the begining.

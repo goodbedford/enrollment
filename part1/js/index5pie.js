@@ -287,7 +287,6 @@
     console.log("clicked details");
     console.log("the this", this);
     $(".detail-nav").toggleClass("hidden", false);
-    // debugger;
     $("#detail-panel").toggleClass("hidden", false);
     index = nextIndex >= 0 ? nextIndex : $(this).index();
     $("#next-btn").attr("data-index", index);
@@ -297,10 +296,6 @@
 
     $("#detail-title").append(text);
 
-    // showChartDetail(convertArr(popularityChart), index, h,w  );
-
-    //if nav chart active index 0 run poplaritychart,
-    //if nav chart active
     selectedChart =  $("a.chart-nav.active");
     chartId = selectedChart.attr("id");
 
@@ -322,8 +317,8 @@
       }
 
       // $(this).clone()
-    //   .toggleClass("month detailChart")
-    //   .appendTo("#detailPanel");
+      //   .toggleClass("month detailChart")
+      //   .appendTo("#detailPanel");
   };
 
   closePanel = function() {
@@ -351,7 +346,6 @@
 
 
 //setup
-  // data = convertArr(popularityChart.first);
   $("#popular").on("click", showPopularity);
   $("#interest").on("click", showInterest);
   $("#trends").on("click", showTrends);
