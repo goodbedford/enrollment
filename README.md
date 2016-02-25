@@ -1,5 +1,5 @@
 #Enrollment#
-##Author: goodbedford##
+###Author: goodbedford###
 
 A Data visualization project showcasing various chart types including animated line, bar, pie, donut and small multiples.
 
